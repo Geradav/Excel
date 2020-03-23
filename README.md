@@ -15,6 +15,6 @@ _Retrieve the semester number from a start date and an end date_
 
 ## One-off calculation
 _Returns 1 only for the first date and zero for all other dates_
-Useful when forecasting expenses based on an expense periode variable
+\nUseful when forecasting expenses based on an expense periode variable
 
      =N(MOD(DATEDIF([StartDate],[EndDate],"M"),9999)=0)
