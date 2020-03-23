@@ -12,3 +12,9 @@ _Retrieve the month number in the semester of a given date_
 _Retrieve the semester number from a start date and an end date_
 
      =ROUNDUP(IMDIV(DATEDIF(EDATE([StartDate],-1),[EndDate],"M"),6),0)
+
+## One-off calculation
+_Returns 1 only for the first date and zero for all other dates_
+Useful when forecasting expenses based on an expense periode variable
+
+     =N(MOD(DATEDIF([StartDate],[EndDate],"M"),9999)=0)
